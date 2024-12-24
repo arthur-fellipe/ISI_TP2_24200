@@ -30,7 +30,8 @@ namespace GestaoContactosSOAP
                         ID = Convert.ToInt32(reader["ID"]),
                         Nome = reader["Nome"].ToString(),
                         Email = reader["Email"].ToString(),
-                        Telefone = reader["Telefone"].ToString()
+                        Telefone = reader["Telefone"].ToString(),
+                        UserID = Convert.ToInt32(reader["UserID"])
                     });
                 }
             }
@@ -59,6 +60,7 @@ namespace GestaoContactosSOAP
                         Nome = reader["Nome"].ToString(),
                         Email = reader["Email"].ToString(),
                         Telefone = reader["Telefone"].ToString(),
+                        UserID = Convert.ToInt32(reader["UserID"])
                     };
                 }
             }
@@ -69,7 +71,7 @@ namespace GestaoContactosSOAP
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO Contactos (Nome, Email, Telefone) VALUES (@Nome, @Email, @Telefone)";
+                string query = "INSERT INTO Contactos (Nome, Email, Telefone, UserID) VALUES (@Nome, @Email, @Telefone, @UserID)";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -77,6 +79,7 @@ namespace GestaoContactosSOAP
                 cmd.Parameters.AddWithValue("@Nome", contact.Nome);
                 cmd.Parameters.AddWithValue("@Email", contact.Email);
                 cmd.Parameters.AddWithValue("@Telefone", contact.Telefone);
+                cmd.Parameters.AddWithValue("@UserID", contact.UserID);
 
                 conn.Open();  // Abrir a conexão
                 cmd.ExecuteNonQuery();  // Executar o comando (sem retorno de dados)

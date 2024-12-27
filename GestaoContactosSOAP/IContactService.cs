@@ -20,13 +20,13 @@ namespace GestaoContactosSOAP
         Contact GetContactById(int id);
 
         [OperationContract]
-        void AddContact(Contact contact);
+        int AddContact(Contact contact);
 
         [OperationContract]
-        void UpdateContact(Contact contact);
+        int UpdateContact(Contact contact);
 
         [OperationContract]
-        void DeleteContact(int id);
+        int DeleteContact(int id);
 
         [OperationContract]
         void AddUser(string username, string passwordHash);

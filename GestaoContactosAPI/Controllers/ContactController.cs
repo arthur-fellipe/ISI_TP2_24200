@@ -5,63 +5,117 @@ using System.Net.Http;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using ServiceReference1;
 
 [Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class ContactController : ControllerBase
 {
-    private readonly HttpClient _httpClient;
+    private readonly ContactServiceClient soapClient;
 
     public ContactController(IHttpClientFactory clientFactory)
     {
-        _httpClient = clientFactory.CreateClient("SoapClient");
+        soapClient = new ContactServiceClient(ContactServiceClient.EndpointConfiguration.BasicHttpBinding_IContactService);
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAllContacts()
     {
-        var soapRequest = CreateSoapRequest("GetAllContacts");
-        var response = await _httpClient.PostAsync("", soapRequest);
-        var result = await response.Content.ReadAsStringAsync();
-        return Ok(result);
+        try
+        {
+            Contact[] contactos = await soapClient.GetAllContactsAsync();
+            if (contactos == null || contactos.Length == 0)
+            {
+                return NotFound("No contacts found.");
+            }
+            return Ok(contactos);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetContactById(int id)
+    {
+        try
+        {
+            Contact contact = await soapClient.GetContactByIdAsync(id);
+            if (contact == null)
+            {
+                return NotFound("Contact not found.");
+            }
+            return Ok(contact);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddContact([FromBody] Contact contact)
+    public async Task<IActionResult> CreateContact([FromBody] Contact contact)
     {
-        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        contact.UserID = int.Parse(userId);
+        try
+        {
+            // Obter o UserID do token JWT
+            var userIdClaim = User.FindFirst("UserID")?.Value;
 
-        var soapRequest = CreateSoapRequest("AddContact", contact);
-        var response = await _httpClient.PostAsync("", soapRequest);
-        var result = await response.Content.ReadAsStringAsync();
-        return Ok(result);
+            // Converter o UserID para inteiro
+            var userId = int.Parse(userIdClaim);
+
+            // Associar o UserID ao novo contacto
+            contact.UserID = userId;
+
+            int result = await soapClient.AddContactAsync(contact);
+            if (result > 0)
+            {
+                return Ok("Contact created successfully.");
+            }
+            return BadRequest("Error creating contact.");
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
     }
 
-    private StringContent CreateSoapRequest(string method, Contact contact = null)
+    [HttpPut]
+    public async Task<IActionResult> UpdateContact([FromBody] Contact contact)
     {
-        var soapEnvelope = new StringBuilder();
-        soapEnvelope.AppendLine(@"<?xml version=""1.0"" encoding=""utf-8""?>");
-        soapEnvelope.AppendLine(@"<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"">");
-        soapEnvelope.AppendLine(@"  <soap:Body>");
-
-        if (method == "GetAllContacts")
+        try
         {
-            soapEnvelope.AppendLine(@"    <GetAllContacts xmlns=""http://tempuri.org/"" />");
+            int result = await soapClient.UpdateContactAsync(contact);
+            if (result > 0)
+            {
+                return Ok("Contact updated successfully.");
+            }
+            return BadRequest("Error updating contact.");
         }
-        else if (method == "AddContact" && contact != null)
+        catch (Exception ex)
         {
-            soapEnvelope.AppendLine(@"    <AddContact xmlns=""http://tempuri.org/"">");
-            soapEnvelope.AppendLine($"      <Nome>{contact.Nome}</Nome>");
-            soapEnvelope.AppendLine($"      <UserID>{contact.UserID}</UserID>");
-            soapEnvelope.AppendLine(@"    </AddContact>");
+            return StatusCode(500, $"Internal server error: {ex.Message}");
         }
+    }
 
-        soapEnvelope.AppendLine(@"  </soap:Body>");
-        soapEnvelope.AppendLine(@"</soap:Envelope>");
-
-        return new StringContent(soapEnvelope.ToString(), Encoding.UTF8, "text/xml");
+    [HttpDelete]
+    public async Task<IActionResult> DeleteContact(int id)
+    {
+        try
+        {
+            int result = await soapClient.DeleteContactAsync(id);
+            if (result > 0)
+            {
+                return Ok("Contact deleted successfully.");
+            }
+            return BadRequest("Error deleting contact.");
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
     }
 }
 

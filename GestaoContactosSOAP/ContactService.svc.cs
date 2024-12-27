@@ -21,13 +21,13 @@ namespace GestaoContactosSOAP
         public Contact GetContactById(int id) => db.GetContactById(id);
 
         // Adiciona um novo contacto
-        public void AddContact(Contact contact) => db.AddContact(contact);
+        public int AddContact(Contact contact) => db.AddContact(contact);
 
         // Atualiza um contacto existente
-        public void UpdateContact(Contact contact) => db.UpdateContact(contact);
+        public int UpdateContact(Contact contact) => db.UpdateContact(contact);
 
         // Deleta um contacto pelo ID
-        public void DeleteContact(int id) => db.DeleteContact(id);
+        public int DeleteContact(int id) => db.DeleteContact(id);
 
         // Valida um utilizador com o nome de usuário e senha
         public bool ValidateUser(string username, string passwordHash) => db.ValidateUser(username, passwordHash);

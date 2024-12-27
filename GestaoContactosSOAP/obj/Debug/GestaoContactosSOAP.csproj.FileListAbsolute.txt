@@ -5,3 +5,14 @@ C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Inf
 C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\obj\Debug\GestaoContactosSOAP.csproj.CoreCompileInputs.cache
 C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\obj\Debug\GestaoContactosSOAP.dll
 C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\obj\Debug\GestaoContactosSOAP.pdb
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\BCrypt.Net-Next.dll
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\System.Buffers.dll
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\System.Memory.dll
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\System.Numerics.Vectors.dll
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\BCrypt.Net-Next.xml
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\System.Buffers.xml
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\System.Memory.xml
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\System.Numerics.Vectors.xml
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Arthur Fellipe\Desktop\3 ANO - LESI\ISI - Integracao de Sistemas da Informacao\ISI_TP2_24200\GestaoContactosSOAP\obj\Debug\GestaoCo.B3F6C568.Up2Date

@@ -67,57 +67,84 @@ namespace GestaoContactosSOAP
             return contact;  // Retorna o contacto encontrado, ou null se não encontrar nenhum
         }
 
-        public void AddContact(Contact contact)
+        public int AddContact(Contact contact)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                string query = "INSERT INTO Contactos (Nome, Email, Telefone, UserID) VALUES (@Nome, @Email, @Telefone, @UserID)";
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO Contactos (Nome, Email, Telefone, UserID) VALUES (@Nome, @Email, @Telefone, @UserID); SELECT SCOPE_IDENTITY();";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                // Usando parâmetros para evitar SQL Injection
-                cmd.Parameters.AddWithValue("@Nome", contact.Nome);
-                cmd.Parameters.AddWithValue("@Email", contact.Email);
-                cmd.Parameters.AddWithValue("@Telefone", contact.Telefone);
-                cmd.Parameters.AddWithValue("@UserID", contact.UserID);
+                    // Usando parâmetros para evitar SQL Injection
+                    cmd.Parameters.AddWithValue("@Nome", contact.Nome);
+                    cmd.Parameters.AddWithValue("@Email", contact.Email);
+                    cmd.Parameters.AddWithValue("@Telefone", contact.Telefone);
+                    cmd.Parameters.AddWithValue("@UserID", contact.UserID);
 
-                conn.Open();  // Abrir a conexão
-                cmd.ExecuteNonQuery();  // Executar o comando (sem retorno de dados)
+                    conn.Open();  // Abrir a conexão
+                    int newId = Convert.ToInt32(cmd.ExecuteScalar());  // Executar o comando e obter o ID gerado
+                    return newId > 0 ? 1 : 0;  // Retornar 1 se o ID for maior que 0, caso contrário 0
+                }
+            }
+            catch (Exception)
+            {
+                // Em caso de erro, retornar 0
+                return 0;
             }
         }
 
-        public void UpdateContact(Contact contact)
+        public int UpdateContact(Contact contact)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                string query = "UPDATE Contactos SET Nome = @Nome, Email = @Email, Telefone = @Telefone WHERE ID = @ID";
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE Contactos SET Nome = @Nome, Email = @Email, Telefone = @Telefone WHERE ID = @ID";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                // Usando parâmetros para evitar SQL Injection
-                cmd.Parameters.AddWithValue("@ID", contact.ID);
-                cmd.Parameters.AddWithValue("@Nome", contact.Nome);
-                cmd.Parameters.AddWithValue("@Email", contact.Email);
-                cmd.Parameters.AddWithValue("@Telefone", contact.Telefone);
+                    // Usando parâmetros para evitar SQL Injection
+                    cmd.Parameters.AddWithValue("@ID", contact.ID);
+                    cmd.Parameters.AddWithValue("@Nome", contact.Nome);
+                    cmd.Parameters.AddWithValue("@Email", contact.Email);
+                    cmd.Parameters.AddWithValue("@Telefone", contact.Telefone);
 
-                conn.Open();  // Abrir a conexão
-                cmd.ExecuteNonQuery();  // Executar o comando (sem retorno de dados)
+                    conn.Open();  // Abrir a conexão
+                    int rowsAffected = cmd.ExecuteNonQuery();  // Executar o comando e obter o número de linhas afetadas
+                    return rowsAffected;  // Retornar o número de linhas afetadas
+                }
+            }
+            catch (Exception)
+            {
+                // Em caso de erro, retornar 0
+                return 0;
             }
         }
 
-        public void DeleteContact(int id)
+        public int DeleteContact(int id)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                string query = "DELETE FROM Contactos WHERE ID = @ID";
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string query = "DELETE FROM Contactos WHERE ID = @ID";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                // Usando parâmetro para evitar SQL Injection
-                cmd.Parameters.AddWithValue("@ID", id);
+                    // Usando parâmetro para evitar SQL Injection
+                    cmd.Parameters.AddWithValue("@ID", id);
 
-                conn.Open();  // Abrir a conexão
-                cmd.ExecuteNonQuery();  // Executar o comando (sem retorno de dados)
+                    conn.Open();  // Abrir a conexão
+                    int rowsAffected = cmd.ExecuteNonQuery();  // Executar o comando e obter o número de linhas afetadas
+                    return rowsAffected;  // Retornar o número de linhas afetadas
+                }
+            }
+            catch (Exception)
+            {
+                // Em caso de erro, retornar 0
+                return 0;
             }
         }
 

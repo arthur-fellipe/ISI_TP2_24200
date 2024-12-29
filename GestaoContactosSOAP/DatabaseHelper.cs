@@ -16,58 +16,78 @@ namespace GestaoContactosSOAP
         public List<Contact> GetAllContacts()
         {
             List<Contact> contacts = new List<Contact>();
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                string query = "SELECT * FROM Contactos";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    contacts.Add(new Contact
+                    string query = "SELECT * FROM Contactos";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        ID = Convert.ToInt32(reader["ID"]),
-                        Nome = reader["Nome"].ToString(),
-                        Email = reader["Email"].ToString(),
-                        Telefone = reader["Telefone"].ToString(),
-                        UserID = Convert.ToInt32(reader["UserID"])
-                    });
+                        contacts.Add(new Contact
+                        {
+                            ID = Convert.ToInt32(reader["ID"]),
+                            Nome = reader["Nome"].ToString(),
+                            Email = reader["Email"].ToString(),
+                            Telefone = reader["Telefone"].ToString(),
+                            UserID = Convert.ToInt32(reader["UserID"])
+                        });
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro inesperado: {ex.Message}");
+                contacts = new List<Contact>();
             }
             return contacts;
         }
+
 
         public Contact GetContactById(int id)
         {
             Contact contact = null;
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                string query = "SELECT * FROM Contactos WHERE ID = @ID";  // SQL para buscar um contacto pelo ID
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@ID", id);
-
-                conn.Open();  // Abrir a conexão
-                SqlDataReader reader = cmd.ExecuteReader();  // Executar a consulta
-
-                if (reader.Read())  // Se encontrar o contacto
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    contact = new Contact
+                    string query = "SELECT * FROM Contactos WHERE ID = @ID"; // SQL para buscar um contacto pelo ID
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        ID = Convert.ToInt32(reader["ID"]),
-                        Nome = reader["Nome"].ToString(),
-                        Email = reader["Email"].ToString(),
-                        Telefone = reader["Telefone"].ToString(),
-                        UserID = Convert.ToInt32(reader["UserID"])
-                    };
+                        cmd.Parameters.AddWithValue("@ID", id);
+                        conn.Open(); // Abrir a conexão
+
+                        using (SqlDataReader reader = cmd.ExecuteReader()) // Executar a consulta
+                        {
+                            if (reader.Read()) // Se encontrar o contacto
+                            {
+                                contact = new Contact
+                                {
+                                    ID = Convert.ToInt32(reader["ID"]),
+                                    Nome = reader["Nome"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Telefone = reader["Telefone"].ToString(),
+                                    UserID = Convert.ToInt32(reader["UserID"])
+                                };
+                            }
+                        }
+                    }
                 }
             }
-            return contact;  // Retorna o contacto encontrado, ou null se não encontrar nenhum
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro inesperado: {ex.Message}");
+            }
+
+            return contact; // Retorna o contacto encontrado ou null caso haja erro
         }
 
-        public int AddContact(Contact contact)
+            public int AddContact(Contact contact)
         {
             try
             {
@@ -145,36 +165,6 @@ namespace GestaoContactosSOAP
             {
                 // Em caso de erro, retornar 0
                 return 0;
-            }
-        }
-
-        // Métodos de Utilizadores
-        public void AddUser(string username, string passwordHash)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "INSERT INTO Utilizadores (Username, PasswordHash) VALUES (@Username, @PasswordHash)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@PasswordHash", passwordHash);
-
-                conn.Open();
-                cmd.ExecuteNonQuery();
-            }
-        }
-
-        public bool ValidateUser(string username, string passwordHash)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT COUNT(*) FROM Utilizadores WHERE Username = @Username AND PasswordHash = @PasswordHash";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@PasswordHash", passwordHash);
-
-                conn.Open();
-                return (int)cmd.ExecuteScalar() > 0;
             }
         }
     }

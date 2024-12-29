@@ -27,11 +27,5 @@ namespace GestaoContactosSOAP
 
         [OperationContract]
         int DeleteContact(int id);
-
-        [OperationContract]
-        void AddUser(string username, string passwordHash);
-
-        [OperationContract]
-        bool ValidateUser(string username, string passwordHash);
     }
 }

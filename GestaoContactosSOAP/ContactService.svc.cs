@@ -28,14 +28,5 @@ namespace GestaoContactosSOAP
 
         // Deleta um contacto pelo ID
         public int DeleteContact(int id) => db.DeleteContact(id);
-
-        // Valida um utilizador com o nome de usuário e senha
-        public bool ValidateUser(string username, string passwordHash) => db.ValidateUser(username, passwordHash);
-
-        // Método para adicionar um novo usuário
-        public void AddUser(string username, string passwordHash)
-        {
-            db.AddUser(username, passwordHash);  // Chama o método no DatabaseHelper
-        }
     }
 }

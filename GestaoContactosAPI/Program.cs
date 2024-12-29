@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "GestaoContactosAPI", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Description = "JWT Authorization header using the Bearer scheme.",
+        Description = "JWT Authorization - Write 'Bearer' + JWT Token.",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
@@ -64,7 +64,6 @@ if (app.Environment.IsDevelopment())
 }
 
 // Habilita autenticação e autorização
-//app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 

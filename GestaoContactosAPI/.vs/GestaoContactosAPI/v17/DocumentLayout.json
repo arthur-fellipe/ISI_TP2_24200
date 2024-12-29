@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:2:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\auxiliar\\authauxiliar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:auxiliar\\authauxiliar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactosapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F9D349D-85C7-4082-8515-E287648FDC1D}|GestaoContactosAPI.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98E7D086-29EE-4E99-926F-AB79900538AB}|..\\GestaoContactosSOAP\\GestaoContactosSOAP.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactossoap\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E7D086-29EE-4E99-926F-AB79900538AB}|..\\GestaoContactosSOAP\\GestaoContactosSOAP.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactossoap\\icontactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E7D086-29EE-4E99-926F-AB79900538AB}|..\\GestaoContactosSOAP\\GestaoContactosSOAP.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactossoap\\contactservice.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E7D086-29EE-4E99-926F-AB79900538AB}|..\\GestaoContactosSOAP\\GestaoContactosSOAP.csproj|c:\\users\\arthur fellipe\\desktop\\3 ano - lesi\\isi - integracao de sistemas da informacao\\isi_tp2_24200\\gestaocontactossoap\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,26 +58,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T23:33:07.319Z",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-29T13:42:31.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "ContactService.svc.cs",
+              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosSOAP\\ContactService.svc.cs",
+              "RelativeDocumentMoniker": "..\\GestaoContactosSOAP\\ContactService.svc.cs",
+              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosSOAP\\ContactService.svc.cs",
+              "RelativeToolTip": "..\\GestaoContactosSOAP\\ContactService.svc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T13:08:48.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosSOAP\\Models\\Contact.cs",
+              "RelativeDocumentMoniker": "..\\GestaoContactosSOAP\\Models\\Contact.cs",
+              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosSOAP\\Models\\Contact.cs",
+              "RelativeToolTip": "..\\GestaoContactosSOAP\\Models\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T13:08:36.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IContactService.cs",
+              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosSOAP\\IContactService.cs",
+              "RelativeDocumentMoniker": "..\\GestaoContactosSOAP\\IContactService.cs",
+              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosSOAP\\IContactService.cs",
+              "RelativeToolTip": "..\\GestaoContactosSOAP\\IContactService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T13:08:25.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosSOAP\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "..\\GestaoContactosSOAP\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosSOAP\\DatabaseHelper.cs",
+              "RelativeToolTip": "..\\GestaoContactosSOAP\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T12:50:26.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthAuxiliar.cs",
+              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Auxiliar\\AuthAuxiliar.cs",
+              "RelativeDocumentMoniker": "Auxiliar\\AuthAuxiliar.cs",
+              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Auxiliar\\AuthAuxiliar.cs",
+              "RelativeToolTip": "Auxiliar\\AuthAuxiliar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T12:04:09.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ContactController.cs",
               "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Controllers\\ContactController.cs",
               "RelativeDocumentMoniker": "Controllers\\ContactController.cs",
               "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Controllers\\ContactController.cs",
               "RelativeToolTip": "Controllers\\ContactController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAkwDkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T23:23:34.367Z",
               "EditorCaption": ""
@@ -73,53 +150,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-27T21:35:03.68Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T21:41:26.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T21:52:34.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T21:25:03.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Arthur Fellipe\\Desktop\\3 ANO - LESI\\ISI - Integracao de Sistemas da Informacao\\ISI_TP2_24200\\GestaoContactosAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T21:41:26.268Z",
               "EditorCaption": ""
             }
           ]

@@ -1,4 +1,5 @@
 ﻿using GestaoContactosAPI.Models;
+using GestaoContactosAPI.Auxiliar;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
@@ -85,38 +86,7 @@ public class AuthController : ControllerBase
             return Unauthorized("Credenciais inválidas.");
         }
 
-        var token = GenerateToken(user);
+        var token = AuthAuxiliar.GenerateToken(user, _config);
         return Ok(new { Token = token });
-    }
-
-    [HttpPost("generate-token")]
-    public string GenerateToken(User user)
-    {
-        var claims = new[]
-        {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Username),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim("UserID", user.UserID.ToString()),
-            new Claim(ClaimTypes.Name, user.Username)
-        };
-
-        var jwtKey = _config["Jwt:Key"];
-        if (string.IsNullOrEmpty(jwtKey))
-        {
-            throw new Exception("Chave JWT não configurada.");
-        }
-
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
-        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-        var token = new JwtSecurityToken(
-            issuer: _config["Jwt:Issuer"],
-            audience: _config["Jwt:Audience"],
-            claims: claims,
-            expires: DateTime.Now.AddMinutes(Convert.ToDouble(_config["Jwt:ExpiryMinutes"])),
-            signingCredentials: creds
-        );
-
-        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }

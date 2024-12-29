@@ -6,10 +6,11 @@ using System.Runtime.Serialization;
 
 namespace GestaoContactosSOAP.Models
 {
-    [DataContract]
+    // Modelo de Contacto
+    [DataContract] // Define a classe como um contrato de dados
     public class Contact
     {
-        [DataMember]
+        [DataMember] // Define a propriedade como um membro do contrato de dados
         public int ID { get; set; }
         [DataMember]
         public string Nome { get; set; }

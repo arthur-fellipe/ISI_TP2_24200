@@ -5,12 +5,15 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configuração da aplicação
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();
 
+// Configuração do Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
+    c.EnableAnnotations();
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "GestaoContactosAPI", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {

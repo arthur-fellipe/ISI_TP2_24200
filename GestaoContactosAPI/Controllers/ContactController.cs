@@ -6,20 +6,32 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using ServiceReference1;
+using Swashbuckle.AspNetCore.Annotations;
 
 [Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class ContactController : ControllerBase
 {
+    // Instância do cliente SOAP
     private readonly ContactServiceClient soapClient;
 
+    // Construtor
     public ContactController(IHttpClientFactory clientFactory)
     {
         soapClient = new ContactServiceClient(ContactServiceClient.EndpointConfiguration.BasicHttpBinding_IContactService);
     }
 
     [HttpGet]
+    [SwaggerOperation(
+        Summary = "Obter todos os contactos",
+        Description = "Obtém todos os contactos do utilizador autenticado.",
+        OperationId = "GetAllContacts",
+        Tags = new[] { "Contact" }
+    )]
+    [SwaggerResponse(200, "Contactos obtidos com sucesso.")]
+    [SwaggerResponse(404, "Não foram encontrados contactos.")]
+    [SwaggerResponse(500, "Erro interno do servidor.")]
     public async Task<IActionResult> GetAllContacts()
     {
         try
@@ -38,6 +50,15 @@ public class ContactController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [SwaggerOperation(
+        Summary = "Obter contacto por ID",
+        Description = "Obtém um contacto específico pelo seu ID.",
+        OperationId = "GetContactById",
+        Tags = new[] { "Contact" }
+    )]
+    [SwaggerResponse(200, "Contacto obtido com sucesso.")]
+    [SwaggerResponse(404, "Contacto não encontrado.")]
+    [SwaggerResponse(500, "Erro interno do servidor.")]
     public async Task<IActionResult> GetContactById(int id)
     {
         try
@@ -56,6 +77,15 @@ public class ContactController : ControllerBase
     }
 
     [HttpPost]
+    [SwaggerOperation(
+        Summary = "Criar contacto",
+        Description = "Cria um novo contacto.",
+        OperationId = "CreateContact",
+        Tags = new[] { "Contact" }
+    )]
+    [SwaggerResponse(200, "Contacto criado com sucesso.")]
+    [SwaggerResponse(400, "Erro ao criar contacto.")]
+    [SwaggerResponse(500, "Erro interno do servidor.")]
     public async Task<IActionResult> CreateContact([FromBody] Contact contact)
     {
         try
@@ -83,6 +113,15 @@ public class ContactController : ControllerBase
     }
 
     [HttpPut]
+    [SwaggerOperation(
+        Summary = "Atualizar contacto",
+        Description = "Atualiza um contacto existente.",
+        OperationId = "UpdateContact",
+        Tags = new[] { "Contact" }
+    )]
+    [SwaggerResponse(200, "Contacto atualizado com sucesso.")]
+    [SwaggerResponse(400, "Erro ao atualizar contacto.")]
+    [SwaggerResponse(500, "Erro interno do servidor.")]
     public async Task<IActionResult> UpdateContact([FromBody] Contact contact)
     {
         try
@@ -101,6 +140,15 @@ public class ContactController : ControllerBase
     }
 
     [HttpDelete]
+    [SwaggerOperation(
+        Summary = "Eliminar contacto",
+        Description = "Elimina um contacto existente.",
+        OperationId = "DeleteContact",
+        Tags = new[] { "Contact" }
+    )]
+    [SwaggerResponse(200, "Contacto eliminado com sucesso.")]
+    [SwaggerResponse(400, "Erro ao eliminar contacto.")]
+    [SwaggerResponse(500, "Erro interno do servidor.")]
     public async Task<IActionResult> DeleteContact(int id)
     {
         try

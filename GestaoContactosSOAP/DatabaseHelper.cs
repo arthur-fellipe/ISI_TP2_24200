@@ -20,10 +20,10 @@ namespace GestaoContactosSOAP
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM Contactos";
+                    string query = "SELECT * FROM Contactos"; // SQL para buscar todos os contactos
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    conn.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    conn.Open(); // Abrir a conexão
+                    SqlDataReader reader = cmd.ExecuteReader(); // Executar a consulta
 
                     while (reader.Read())
                     {
@@ -43,7 +43,7 @@ namespace GestaoContactosSOAP
                 Console.WriteLine($"Erro inesperado: {ex.Message}");
                 contacts = new List<Contact>();
             }
-            return contacts;
+            return contacts; // Retorna a lista de contactos
         }
 
 
